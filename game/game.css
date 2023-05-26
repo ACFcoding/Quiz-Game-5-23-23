@@ -1,0 +1,38 @@
+* {
+    background-color: aquamarine;
+}
+
+
+header {
+    font-size: 9px;
+    } 
+
+    h2 {
+        text-align: center;
+padding-top: 10%;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-style: solid;
+        border-radius: 1px;
+        border-color: rgb(246, 75, 75);
+        padding: 10px;
+        background-color: #F25F5C;
+        width: 100%;
+    }
+    p:hover {
+        opacity: 0.85;
+    }
+    p:active {
+        opacity: 0.5;
+    }
+
+footer {
+    /*moved to the right to have it be on the opposite side of the screen as the highscore tab. This puts the score tab, quiz, and timer in a diagnal line*/
+position: absolute;
+bottom: 15px;
+right: 55px;
+}
