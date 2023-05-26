@@ -64,8 +64,8 @@ getNewQuestion();
 getNewQuestion = () => {
 
     if (allQuestions.length === 0){
-        return window.location.assign('highScore/highScore.html')
-    }
+        return window.location.assign('highScore.html');
+    };
 
     counter++;
     const questionIndex = Math.floor(Math.random() * allQuestions.length);
