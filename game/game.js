@@ -50,11 +50,17 @@ const totalQuestions = 4;
 start = () => {
 counter = 0
 time = 120
+//Set timer to two minutes
+timeCount = setInterval(function(){
+    --time; 
+    document.getElementById("timer").innerText = time;
+}, 1000
+);
 allQuestions = [...questions];
 getNewQuestion();
 };
 
-//Grabs the questions randomly. Bug noticed involving the 
+//Grabs the questions randomly.
 getNewQuestion = () => {
 
     if (allQuestions.length === 0){
@@ -68,7 +74,7 @@ getNewQuestion = () => {
    
 choices.forEach( choice => {
     const number = choice.dataset['number'];
-    choice.innerText = currentQuestion['choice' + number];
+    choice.innerHTML = currentQuestion['choice' + number];
 })
 
     allQuestions.splice(questionIndex, 1);
@@ -82,14 +88,13 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-
-        var classToApply = 'wrong';
+//Set up timer penalty as well as the if statement that moves the questions forward
+        var answerVerification = 'wrong'; time =(time - 15);
         if (selectedAnswer == currentQuestion.answer) {
-            classToApply = 'right';
+            answerVerification = 'right';
         }
-        console.log(classToApply);
 
-        selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.add(answerVerification);
 
         getNewQuestion();
     });
