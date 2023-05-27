@@ -4,11 +4,14 @@ console.log(choices)
 
 let currentQuestion = {};
 let acceptingAnswers = false;
+//added time to match acceptance criteria
 let time = 120;
 let counter = 0;
 let allQuestions = [];
 
 //All questions and answers are set in this array to be called on later
+//Questions changed to better cover course work and to look cleaner
+//remember to change the array before resubmit. this works, but it isn't ideal
 let questions = [
     {
     question: "What Javascript element has a value of either true or false?",
@@ -70,7 +73,8 @@ getNewQuestion = () => {
     counter++;
     const questionIndex = Math.floor(Math.random() * allQuestions.length);
     currentQuestion = allQuestions[questionIndex];
-    question.innerText = currentQuestion;
+    question.innerText = currentQuestion.question;
+    //resolved bug. currentQuestion.questions was changed to drop the s. that was the issue
    
 choices.forEach( choice => {
     const number = choice.dataset['number'];

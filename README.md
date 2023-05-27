@@ -5,7 +5,8 @@ Game will score players based on time remaining, where failed questions dock tim
 
 Folowing video series was used assist in java code creation and remembering which variables to add.
 https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx
-http://127.0.0.1:5500/index.html
+Launch page:
+https://acfcoding.github.io/Quiz-Game-5-23-23/
 
 
 ![Screenshot (6)](https://github.com/ACFcoding/Quiz-Game-5-23-23/assets/128546733/bb669076-9a51-4316-830e-1d34cf04a867)

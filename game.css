@@ -18,6 +18,7 @@ padding-top: 10%;
         justify-content: space-around;
         border-style: solid;
         border-radius: 1px;
+        /*added a border color and a change in opacity to give better visual feednack to user */
         border-color: rgb(246, 75, 75);
         padding: 10px;
         background-color: #F25F5C;
