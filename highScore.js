@@ -10,7 +10,8 @@ var bestScores =JSON.parse(localStorage.getItem('bestScores'))
     //button.disabled = !username.value;
 //}
 //);
-finalScore = time;
+finalScore = time.back;
+console.log(finalScore);
 
 scoreSave = e => {
     preventDefault();

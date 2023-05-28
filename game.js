@@ -52,16 +52,20 @@ const totalQuestions = 4;
 //starting data, with time selected but not yet called
 start = () => {
 counter = 0
-time = 120
+time = 55
 //Set timer to two minutes
 timeCount = setInterval(function(){
-    --time; 
-    document.getElementById("timer").innerText = time;
-}, 1000
+    if (time > 0) {
+        --time; 
+        document.getElementById("timer").innerText = time;
+    }
+}, 1000 
+
 );
 allQuestions = [...questions];
 getNewQuestion();
 };
+
 
 //Grabs the questions randomly.
 getNewQuestion = () => {
@@ -69,6 +73,8 @@ getNewQuestion = () => {
     if (allQuestions.length === 0){
         return window.location.assign('highScore.html');
     };
+
+
 
     counter++;
     const questionIndex = Math.floor(Math.random() * allQuestions.length);
